@@ -5,11 +5,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // Part B Exercise code below
-
+const Logo = () => {
+   return <h1>🧇 Waffle On</h1>;
+};
 function Homepage() {
   return (
     <div class="container">
-      <h1>🧇 Waffle On</h1>
+      <Logo />
       <ul class="nav-menu">
         <li class="nav-item">
           <a href="#" class="nav-link">Home</a>
