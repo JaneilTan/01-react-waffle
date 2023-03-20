@@ -23,52 +23,7 @@ const NavMenu = () => (
       </ul>
   </>
 );
-const WafflesMenu = () => {
-  return (
-  <>
-  <h4>Waffles</h4>
-  <ul>
-    <MenuItem
-      title="Strawberry Waffles"
-      price="$10"
-      imgSrc="/waffles-strawberry.jpg"
-      />
-    <MenuItem
-      title="Blueberry waffles"
-      price="$10"
-      imgSrc="/waffles-blueberry.jpg"
-      />
-    <MenuItem
-      title="Fried chicken waffles"
-      price="$12"
-      imgSrc="/waffles-chicken.jpg"
-      />
-  </ul>
-  </>
-  );
-};
 
-const BeverageMenu = () => {
-  return (
-    <>
-      <h4>Beverages</h4>
-        <ul>
-          <li>
-            <p>Coffee - $4</p>
-            <p>
-              <img src="/coffee.jpg" alt="Coffee" width="50%" />
-            </p>
-          </li>
-          <li>
-            <p>Orange juice - $3</p>
-            <p>
-              <img src="/orange-juice.jpg" alt="Orange juice" width="50%" />
-            </p>
-          </li>
-        </ul>
-    </>
-  );
-};
 const MenuItem = ({ title, price, imgSrc}) => {
   return (
     <li>
@@ -81,6 +36,14 @@ const MenuItem = ({ title, price, imgSrc}) => {
     </li>
   );
 };
+const Menu = ({ title, children }) => {
+  return (
+    <>
+      <h4>{title}</h4>
+      <ul>{children}</ul>
+    </>
+  );
+};
 function Homepage() {
   return (
     <div class="container">
@@ -91,8 +54,36 @@ function Homepage() {
         <p>Come on in and get your waffle of fitness.</p>
 
         <h3>Menu</h3>
-        <WafflesMenu />
-        <BeverageMenu />
+        <Menu title="Waffles">
+        <MenuItem
+          title="Strawberry Waffles"
+          price="$10"
+          imgSrc="/waffles-strawberry.jpg"
+          />
+          <MenuItem
+            title="Blueberry waffles"
+            price="$10"
+            imgSrc="/waffles-blueberry.jpg"
+          />
+          <MenuItem
+            title="Fried chicken waffles"
+            price="$12"
+            imgSrc="/waffles-chicken.jpg"
+          />
+        </Menu>
+        
+        <Menu title="Beverage">
+          <MenuItem
+            title="Coffee"
+            price="$4"
+            imgSrc="/coffee.jpg"
+            />
+          <MenuItem
+            title="Orange juice"
+            price="$3"
+            imgSrc="/orange-juice.jpg"
+            />
+          </Menu>
       </article>
 
       <footer class="footer">
