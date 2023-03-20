@@ -28,26 +28,41 @@ const WafflesMenu = () => {
   <>
   <h4>Waffles</h4>
   <ul>
+  <StrawberryWaffleMenuItem />
+  <BlueberryWaffleMenuItem />
+  <FriedChickenWaffleMenuItem />
+  </ul>
+  </>
+  );
+};
+const StrawberryWaffleMenuItem = () => {
+  return (
     <li>
       <p>Strawberry waffles - $10</p>
       <p>
-        <img src="/waffles-strawberry.jpg" alt="Strawberry waffles" width="50%" />
+        <img src="/waffles-strawberry.jpg" alt="Waffles" width="50%" />
       </p>
     </li>
+  );
+};
+const BlueberryWaffleMenuItem = () => {
+  return (
     <li>
-      <p>Blueberry waffles - $11</p>
-      <p>
-        <img src="/waffles-blueberry.jpg" alt="Blueberry waffles" width="50%" />
-      </p>
-    </li>
+    <p>Blueberry waffles - $11</p>
+    <p>
+      <img src="/waffles-blueberry.jpg" alt="Blueberry waffles" width="50%" />
+    </p>
+  </li>
+  );
+};
+const FriedChickenWaffleMenuItem = () => {
+  return (
     <li>
-      <p>Fried chicken waffles - $12</p>
-      <p>
-        <img src="/waffles-chicken.jpg" alt="Fried chicken waffles" width="50%" />
-      </p>
-    </li>
-  </ul>
-  </>
+    <p>Fried chicken waffles - $12</p>
+    <p>
+      <img src="/waffles-chicken.jpg" alt="Fried chicken waffles" width="50%" />
+    </p>
+  </li>
   );
 };
 function Homepage() {
