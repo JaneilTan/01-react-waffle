@@ -6,7 +6,7 @@ import './index.css';
 
 // Part B Exercise code below
 const Logo = () => {
-  return <h1>🧇 Waffle On</h1>;
+  return (<h1>🧇 Waffle On</h1>);
 };
 const NavMenu = () => (
   <>
@@ -65,19 +65,10 @@ const FriedChickenWaffleMenuItem = () => {
   </li>
   );
 };
-function Homepage() {
+const BeverageMenu = () => {
   return (
-    <div class="container">
-      <Logo />
-      <NavMenu />
-      
-      <article class="homepage">
-        <h2>Waffle you like to order?</h2>
-        <p>Come on in and get your waffle of fitness.</p>
-
-        <h3>Menu</h3>
-        <WafflesMenu />
-        <h4>Beverages</h4>
+    <>
+      <h4>Beverages</h4>
         <ul>
           <li>
             <p>Coffee - $4</p>
@@ -92,6 +83,21 @@ function Homepage() {
             </p>
           </li>
         </ul>
+    </>
+  )
+}
+function Homepage() {
+  return (
+    <div class="container">
+      <Logo />
+      <NavMenu />
+      <article class="homepage">
+        <h2>Waffle you like to order?</h2>
+        <p>Come on in and get your waffle of fitness.</p>
+
+        <h3>Menu</h3>
+        <WafflesMenu />
+        <BeverageMenu />
       </article>
 
       <footer class="footer">
