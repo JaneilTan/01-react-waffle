@@ -28,43 +28,26 @@ const WafflesMenu = () => {
   <>
   <h4>Waffles</h4>
   <ul>
-  <StrawberryWaffleMenuItem />
-  <BlueberryWaffleMenuItem />
-  <FriedChickenWaffleMenuItem />
+    <MenuItem
+      title="Strawberry Waffles"
+      price="$10"
+      imgSrc="/waffles-strawberry.jpg"
+      />
+    <MenuItem
+      title="Blueberry waffles"
+      price="$10"
+      imgSrc="/waffles-blueberry.jpg"
+      />
+    <MenuItem
+      title="Fried chicken waffles"
+      price="$12"
+      imgSrc="/waffles-chicken.jpg"
+      />
   </ul>
   </>
   );
 };
-const StrawberryWaffleMenuItem = () => {
-  return (
-    <li>
-      <p>Strawberry waffles - $10</p>
-      <p>
-        <img src="/waffles-strawberry.jpg" alt="Waffles" width="50%" />
-      </p>
-    </li>
-  );
-};
-const BlueberryWaffleMenuItem = () => {
-  return (
-    <li>
-    <p>Blueberry waffles - $11</p>
-    <p>
-      <img src="/waffles-blueberry.jpg" alt="Blueberry waffles" width="50%" />
-    </p>
-  </li>
-  );
-};
-const FriedChickenWaffleMenuItem = () => {
-  return (
-    <li>
-    <p>Fried chicken waffles - $12</p>
-    <p>
-      <img src="/waffles-chicken.jpg" alt="Fried chicken waffles" width="50%" />
-    </p>
-  </li>
-  );
-};
+
 const BeverageMenu = () => {
   return (
     <>
@@ -84,8 +67,20 @@ const BeverageMenu = () => {
           </li>
         </ul>
     </>
-  )
-}
+  );
+};
+const MenuItem = ({ title, price, imgSrc}) => {
+  return (
+    <li>
+      <p>
+        {title} - {price}
+      </p>
+      <p>
+        <img src={imgSrc} alt={title} width="50%" />
+      </p>
+    </li>
+  );
+};
 function Homepage() {
   return (
     <div class="container">
